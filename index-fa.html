@@ -46,7 +46,8 @@
     h2,
     h3,
     h4,
-    .header {
+    .header,
+    .graphic {
       font-family: 'Vazir', 'Open Sans', sans-serif;
     }
   </style>
@@ -122,111 +123,119 @@
             href="https://www.youtube.com/watch?v=f57LXUbrtPU">ذرات بزاق به
             اندازه‌های مختلف به اطراف پخش</a>
           می‌شود. اگر این ذرات واگیردار باشند، می‌توان گفت که این «اسپری بزاق» پر از ذرات ویروسی است.
+          این <a href="https://arxiv.org/pdf/2005.10988.pdf">اسپری بزاق پر از ویروس</a> روش اصلی انتشار ویروس کروناست.
         </p>
 
-        <p>
-          But first, let’s get a ballpark sense for some numbers.
-          When a person exhales, they <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">spray out saliva
-            particles</a> of various tiny sizes.
-          If they're contagious, then this 'mouth spray' is loaded with viral particles.
-          This <a href="https://arxiv.org/pdf/2005.10988.pdf">virus-laden saliva spray</a> is the main way that COVID-19
-          spreads.
-        </p>
+        <p>وقتی که یک فردناقل نفس می‌کشد، در هر دقیقه حدود <b>هزار</b> ذره‌ی ویروسی را اسپری می‌کند.</p>
 
-        <p>When a contagious person breathes, they spray out roughly <b>a thousand</b> viral particles every minute.</p>
+        <p>وقتی که راه می‌رود، در هر دقیقه حدود <b>ده هزار</b> ذره‌ی ویروسی را اسپری می‌کند.</p>
 
-        <p>When they talk, they spray out roughly <b>ten thousand</b> viral particles every minute.</p>
+        <p>وقتی که سرفه می‌کند، در هر دقیقه حدود <b>صد هزار</b> ذره‌ی ویروسی را اسپری می‌کند.</p>
 
-        <p>When they cough, they spray out roughly <b>a hundred thousand</b> viral particles.</p>
-
-        <p>And when they sneeze, they spray out roughly <b>a million</b> viral particles.</p>
+        <p>و وقتی که عطسه می‌کند، در هر دقیقه حدود <b>یک میلیون</b> ذره‌ی ویروسی را اسپری می‌کند.</p>
 
         <p>
-          The more viral particles travel from person to person, the higher the chance of infection.
-          (And if infected, people exposed to more viral particles generally experience <a
-            href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">more severe
-            symptoms</a>.)
+          هرچه ذره‌ی ویروسی بیشتری از شخصی به شخص دیگر منتقل شود شانس بیماری بیشتر می‌شود.
+          (به‌علاوه، از بین افرادی که بیمار می‌شوند، کسانی که در معرض ذرات بیشتری بوده‌اند <a
+            href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">علائم شدیدتری</a> بروز
+          دادند.)
         </p>
 
       </div>
 
       <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person"><span class="red">Transmission Route 1:</span> When a contagious person
-        is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+        susceptibleperson="Susceptible Person">
+        <span>
+          <span class="red">مسیر انتقال ۱: </span>
+          وقتی یک شخص ناقل نزدیک یک شخص مستعد دریافت ویروس قرار بگیرد، «اسپری دهانی» می‌تواند بیماری را منتشر کند
+        </span>
+      </anim-with-caption>
 
       <div class="container">
-
-        <p>Masks reduce the mouth spray traveling between people — by blocking or by redirecting the spray — thereby
-          reducing the chance of infection.</p>
-
         <p>
-          It's worth keeping in mind that no mask is perfect.
-          Even the N95 masks recommend for use by health workers are only guaranteed to block <a
-            href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% of the hardest-to-block particles</a> (and that’s
-          only if you <a href="https://www.n95decon.org/publications">wear them correctly</a>).
+          ماسک می‌تواند میزان انتقال «اسپری دهانی» بین افراد را - با مسدود کردن یا تغییر جهت اسپری - کم کند. در نتیجه
+          می‌تواند
+          شانس انتقال بیماری را کم کند.
         </p>
 
         <p>
-          Masks don't guarantee safety, they reduce risk.
-          This is a lot like how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of
-          getting wet.
-          Like umbrellas, masks only work if you use them correctly.
-          But unlike umbrellas, which only protect people who use them, masks also protect people <i>around</i> the
-          wearer.
+          لازم است بدانیم که هیچ ماسکی بدون نقص نیست. حتی ماسک‌های N95 که برای استفاده‌ی کادر درمانی طراحی شده‌اند هم
+          فقط می‌توانند جلوی انتقال <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">۹۵٪ ذرات ریز</a> را بگیرند.
+          (البته اگر این ماسک‌ها <a href="https://www.n95decon.org/publications">به درستی</a> استفاده شوند.)
+        </p>
+
+        <p>
+          ماسک، ایمنی را تضمین نمی‌کند بلکه ریسک بیمار شدن را کاهش می‌دهد.
+          همانطور که چتر تضمین نمی‌کند که زیر باران خشک بمانید، بلکه ریسک خیس شدن را کم می‌کند.
+          مانند چتر، ماسک هم فقط زمانی مؤثر است که به درستی استفاده شود.
+          ولی برخلاف چتر که فقط از فرد استفاده کننده محافظت می‌کند، ماسک از کسانی که در <i>اطراف</i> فرد استفاده کننده
+          قرار دارند هم حفاظت می‌کند.
         </p>
 
         <p>
         </p>
 
-        <h2>Why Masks Protect Us Twice</h2>
+        <h2>چرا محافظت ماسک دوگانه است؟</h2>
 
         <p>
-          Let’s imagine that a contagious person wears a 50 percent effective mask.
-          By '50 percent effective', I mean that wearing this mask cuts in half the chance that they'll infect a nearby
-          susceptible person.
+          فرض کنید که یک فرد ناقل از ماسکی استفاده می‌کند که فقط ۵۰٪ مؤثر است.
+          منظور از «۵۰٪ مؤثر» این است که استفاده از این ماسک شانس انتقال بیماری به فرد سالمی را که در نزدیکی شما قرار
+          دارد نصف می‌کند.
         </p>
 
       </div>
 
       <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 2:</span> When the contagious
-        person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+        susceptibleperson="Susceptible Person">
+        <span>
+          <span class="orange">مسیر انتقال ۲: </span>وقتی فرد ناقل ماسک ۵۰٪ مؤثری را استفاده کند، میزان انتقال بیماری
+          ۵۰٪ کاهش پیدا می‌کند
+        </span>
+      </anim-with-caption>
 
       <div class="container">
 
-        <p>But what if the susceptible person wears the mask instead?</p>
+        <p>اما اگر فرد مستعد در عوض از ماسک استفاده کند چه؟</p>
 
         <p>
-          In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through
-          it.
-          For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+          به طور کلی، میزان مؤثر بودن ماسک به این بستگی دارد که آیا از درون ماسک در حال انجام <b>دم</b> هستید یا
+          <b>بازدم</b>.
+          برای اینکه موضوع ساده‌تر شود، فرض کنید که ماسک فرضی مورد نظر ما از هر دو طرف به یک اندازه مؤثر است.
         </p>
 
-        <p>In that case, the chance of infection in this route also drops by 50%.</p>
+        <p>در این صورت، شانس بیمار شدن از این مسیر هم ۵۰٪ است.</p>
 
       </div>
 
       <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible
-        person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+        susceptibleperson="Susceptible Person">
+        <span>
+          <span class="orange">مسیر انتقال ۳: </span>
+          وقتی که فرد مستعد ماسکی استفاده می‌کند که ۵۰٪ مؤثر است، میزان انتقال بیماری ۵۰٪ کاهش می‌یابد
+        </span>
+      </anim-with-caption>
 
       <div class="container">
 
-        <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p>
+        <p>اگر فرد ناقل و فرد مستعد <i>هردو</i> از ماسک استفاده کنند چه؟</p>
 
         <p>
-          Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of
-          infection in half.
-          So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when
-          neither wear masks).
-          That's a 75% drop in the chance of infection.
+          در این صورت، ماسک اول شانس بیماری را نصف می‌کند، سپس ماسک دوم یک بار دیگر شانس بیماری را نصف می‌کند.
+          بنابراین، وقتی هر دو نفر از ماسک استفاده کنند، شانس بیماری نصف از نصف می‌شود. (یا به عبارتی، ۲۵٪ زمانی که هیچ
+          کدام از ماسک استفاده نمی‌کردند).
+          این یعنی شانس بیماری ۷۵٪ کاهش پیدا می‌کند.
         </p>
 
       </div>
 
       <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear
-        50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+        susceptibleperson="Susceptible Person">
+
+        <span>
+          <span class="yellow">مسیر انتقال ۴: </span> وقتی هر دو نفر از ماسک با اثر ۵۰٪ استفاده کنند، انتقال بیماری ۷۵٪
+          کاهش پیدا می‌کند
+        </span>
+      </anim-with-caption>
 
       <div class="container">
 

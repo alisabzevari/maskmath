@@ -5,7 +5,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>قدرت اعجاب‌آور ماسک</title>
+  <title>قدرت شگفت‌آور ماسک</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="مقاله‌ای تعالمی درباره‌ی اینکه چگونه ماسک می‌تواند کرونا را ریشه‌کن کند">
@@ -36,6 +36,21 @@
   <meta property="og:description"
     content="حتی ماسک‌های نیمه‌مؤثر می‌توانند مانع از انتشار ویروس کرونا شوند، اگر تعداد افراد کافی از آن استفاده کنند." />
 
+
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v26.0.2/dist/font-face.css" rel="stylesheet"
+    type="text/css" />
+
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    .header {
+      font-family: 'Vazir', 'Open Sans', sans-serif;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -46,16 +61,16 @@
         <p5 src="js/sketch0.js"></p5>
         <div class="overlay">
           <div>
-            <h1>قدرت اعجاب‌آور ماسک</h1>
+            <h1>قدرت شگفت‌آور ماسک</h1>
             <h3>مقاله‌ای تعالمی درباره‌ی اینکه چگونه ماسک می‌تواند کرونا را ریشه‌کن کند</h3>
             <h4>اثر <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a
                 href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+
             <h5>
               <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a
                 href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a
                 href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-ru.html">Русский</a> &middot; <a
-                href="index-fa.html">فارسی</a> &middot; <a href="https://github.com/aatishb/maskmath/issues/4">Add a
-                Translation</a>
+                href="index-fa.html">فارسی</a> &middot;
             </h5>
           </div>
         </div>
@@ -64,28 +79,28 @@
       <div class="container">
 
         <p>
-          We <a href="https://www.preprints.org/manuscript/202004.0203/v1">now</a> <a
-            href="https://link.springer.com/article/10.1007/s11606-020-06067-8">know</a> <a
-            href="https://science.sciencemag.org/content/368/6498/1422">that</a> masks have an outsized effect on
-          slowing the spread of COVID-19.
-          And yet, some people oppose wearing masks because they view this as a personal choice rather than a public
-          health issue.
+          ما <a href="https://www.preprints.org/manuscript/202004.0203/v1">اکنون</a> <a
+            href="https://link.springer.com/article/10.1007/s11606-020-06067-8">به‌خوبی</a> <a
+            href="https://science.sciencemag.org/content/368/6498/1422">میدانیم</a> که ماسک‌ها تأثیر بسزایی
+          در کاهش روند انتشار ویروس کرونا دارند.
+          با این وجود، بعضی از افراد از پوشیدن ماسک خودداری می‌کنند، به دلیل اینکه معتقدند این یک انتخاب شخصی است و نه
+          یک موضوع سلامت عمومی.
         </p>
 
         <p>
-          This misses the big picture because <a
-            href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masks protect the wearer <i>and</i> the
-            people around them</a>.
-          This <a
-            href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">two-way
-            protection</a> makes widespread mask-wearing a powerful way to extinguish an epidemic.
+          چنین دیدگاهی این نکته‌ی مهم را در نظر نمی‌گیرد که ماسک <a
+            href="https://link.springer.com/article/10.1007/s11606-020-06067-8">هم از فرد پوشنده و هم از اطرافیانش</a>
+          محافظت می‌کند.
+          این <a
+            href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">محافظت
+            دوطرفه</a> باعث می شود تا استفاده گسترده از ماسک روشی مؤثر برای فرونشاندن یک همه‌گیری باشد.
         </p>
 
         <network :maskusage="0.6"></network>
 
         <p>
-          By doing the math on masks, we'll see how when 60% of people wear 60% effective masks, disease transmission
-          drops by as much as 60% — roughly what's needed to stop the spread of COVID-19.
+          با انجام محاسبات ریاضی، خواهیم فهمید که اگر ۶۰٪ افراد ماسک‌هایی بزنند که فقط ۶۰٪ کارایی دارند، انتقال بیماری
+          هم ۶۰٪ کاهش پیدا خواهد کرد - این تقریباً همان چیزی است که برای توقف انتقال ویروس کرونا لازم است.
         </p>
 
         <aside>
@@ -93,13 +108,21 @@
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <span style="margin-top: 0.75rem;">
-              Watch the companion video: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER
+              ویدئوی تکمیلی این مقاله را به زبان انگلیسی ببینید: <a
+                href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER
                 Than You'd Think</a>
             </span>
           </div>
         </aside>
 
         <h2>Say it, Don't Spray It</h2>
+
+        <p>
+          پیش از هر چیز، چطور است درکی حدودی از اعداد مرتبط با این موضوع پیدا کنیم. هنگام بازدم <a
+            href="https://www.youtube.com/watch?v=f57LXUbrtPU">ذرات بزاق به
+            اندازه‌های مختلف به اطراف پخش</a>
+          می‌شود. اگر این ذرات واگیردار باشند، می‌توان گفت که این «اسپری بزاق» پر از ذرات ویروسی است.
+        </p>
 
         <p>
           But first, let’s get a ballpark sense for some numbers.

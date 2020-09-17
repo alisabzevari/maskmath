@@ -291,62 +291,62 @@
           از این یافته‌ها چگونه می‌توانیم در درک انتقال بیماری درون یک جامعه استفاده کنیم؟
         </p>
 
-        <p>Well, in the extreme limits, this is straightforward.</p>
+        <p>در شرایط حداکثری و حداقلی پاسخ به این سوال سرراست است.</p>
 
         <p>
-          For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span
-            class="red">neither wear a mask</span> is 100%.
+          به عنوان مثال، اگر <b>هیچ‌کس</b> از ماسک استفاده نکند، وقتی دو نفر باهم ملاقات کنند شانس اینکه <span
+            class="red">هیچ‌کدام ماسک نداشته باشند</span>
+          ۱۰۰٪ است.
         </p>
 
         <network :maskusage="0"></network>
 
         <p>
-          So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the
-          population would see <span class="red">no drop</span> in disease transmission.
+          در چنین شرایطی کافی است فقط <span class="red">مسیر اول</span> انتقال بیماری را در نظر بگیریم که در این حالت
+          <span class="red">هیچ گونه کاهش</span> انتقال بیماری
+          را در جامعه نمی‌بینیم.
         </p>
 
         <p>
-          At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they
-          <span class="yellow">both wear masks</span> is 100%.
+          از طرفی، اگر <b>همه</b> ماسک بزنند وقتی دو نفر باهم ملاقات کنند شانس اینکه <span class="yellow">هردو از ماسک
+            استفاده کنند</span> ۱۰۰٪ است.
         </p>
 
         <network :maskusage="1"></network>
 
         <p>
-          In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-          Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75%
-            drop</span> in disease transmission.
+          در چنین شرایطی کافی است فقط <span class="yellow">مسیر آخر</span> انتقال بیماری را در نظر بگیریم.
+          با فرض اینکه ماسک از هر طرف ۵۰٪ اثربخشی داشته باشد، شاهد <span class="yellow">کاهش ۷۵ درصدی</span> انتقال
+          بیماری در جامعه خواهیم بود.
         </p>
 
         <p>
-          So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the
-          drop in disease transmission in the population, because there's only one route involved.
+          بنابراین اگر همه ماسک بزنند (یا هیچ کس ماسک نزند)، به سادگی می‌توان کاهش انتقال بیماری را در جامعه محاسبه کرد.
+          به دلیل اینکه فقط یکی از مسیرهای ذکر شده در محاسبات دخیل خواهد بود.
         </p>
 
         <p>
-          But in reality, some people wear masks and others don’t.
-          Which means the virus can spread through a mix of all four routes.
-          How likely each route is will depend on how many people wear masks.
+          اما در واقعیت، بعضی‌ها ماسک می‌زنند و بعضی نمی‌زنند. بنابراین همه‌ی چهار مسیر انتقال ویروس باهم در جامعه اتفاق
+          می‌افتد. اینکه شانس هر مسیر چقدر است به این بستگی دارد که چه تعداد از افراد جامعه ماسک می‌زنند.
         </p>
 
         <label class="row half bigsplash">
-          <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+          <div>میزان استفاده از ماسک: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
           <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
         </label>
 
         <network :maskusage="pnetwork"></network>
 
         <p>
-          For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that
-          <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-          Similarly, you can work out the chance of the other three disease transmission routes.
+          به عنوان مثال، <b>اگر ۵۰٪ مردم ماسک بزنند</b>، هرگاه دو نفر به‌طور تصادفی باهم ملاقات کنند، احتمال اینکه
+          <span class="yellow">هردو ماسک زده باشند</span>، ۵۰٪ × ۵۰٪ (برابر با ۲۵٪) خواهد بود.
+          به همین صورت می‌توان شانس سه مسیر دیگر انتقال بیماری را محاسبه کرد.
         </p>
 
         <p>
-          When exactly half the population wears masks, it turns out that each route is equally likely.
-          (Can you convince yourself why this has to be true?)
+          وقتی که نصف افراد جامعه ماسک بزنند، احتمال رخ دادن همه‌ی چهار مسیر انتقال بیماری برابر خواهد بود.
+          (آیا می‌توانید دلیل آن را برای خود توضیح دهید؟)
         </p>
-
       </div>
 
       <div class="graphic">
@@ -355,7 +355,7 @@
           <div class="row big-small-small">
 
             <div class="column onehundredpx">
-              <div class="center">Disease Transmission Route</div>
+              <div class="center">مسیر انتقال بیماری</div>
               <anim :mask1="false" :mask2="false"></anim>
               <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
               <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -363,7 +363,7 @@
             </div>
 
             <div class="column onehundredpx">
-              <div class="center">Drop in Disease Transmission</div>
+              <div class="center">کاهش انتقال بیماری</div>
               <div class="center"><span class="red">0%</span></div>
               <div class="center"><span class="orange">50%</span></div>
               <div class="center"><span class="orange">50%</span></div>
@@ -371,7 +371,7 @@
             </div>
 
             <div class="column onehundredpx">
-              <div class="center">Chance of This Route</div>
+              <div class="center">احتمال رخ دادن مسیر</div>
               <div class="center">25%</div>
               <div class="center">25%</div>
               <div class="center">25%</div>
@@ -381,8 +381,8 @@
           </div>
 
           <div class="caption">
-            The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50%
-            effective mask.
+            همه‌ی چهار مسیری که ویروس کرونا می‌تواند از شخصی به شخصی دیگر منتقل شود، با فرض اینکه ۵۰٪ افراد، ماسک با
+            اثربخشی ۵۰٪ استفاده کنند.
           </div>
 
         </div>
@@ -391,10 +391,15 @@
       <div class="container">
 
         <p>
-          We can now calculate the <b>average drop in disease transmission in the population</b>.
-          Since we’ve set things up so that each route is equally likely, this is just the average of <span
-            class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span
-            class="yellow">75%</span>, which is 43.75%.
+          حال می‌توان <b>میانگین کاهش انتقال بیماری در جامعه</b> را محاسبه کرد.
+          از آنجا که شرایط را به‌گونه‌ای فرض کردیم که همه‌ی مسیرها با احتمالی برابر رخ دهند، جواب به‌سادگی میانگین
+          <span class="red">۰٪</span>، <span class="orange">۵۰٪</span>، <span class="orange">۵۰٪</span> و
+          <span class="yellow">۷۵٪</span> خواهد بود که برابر است با ۴۳٫۷۵٪.
+        </p>
+
+        <p>
+          افرادی که ماسک <i>نمی‌زنند</i>، از طریق دو مسیر اول آلوده می‌شوند. این دو مسیر، در صورتی که نصف افراد جامعه ماسک
+          بزنند، با احتمال برابر رخ خواهند داد.
         </p>
 
         <p>

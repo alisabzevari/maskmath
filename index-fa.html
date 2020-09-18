@@ -363,7 +363,7 @@
             </div>
 
             <div class="column onehundredpx">
-              <div class="center">کاهش انتقال بیماری</div>
+              <div class="center">میزان کاهش در انتقال بیماری</div>
               <div class="center"><span class="red">0%</span></div>
               <div class="center"><span class="orange">50%</span></div>
               <div class="center"><span class="orange">50%</span></div>
@@ -445,12 +445,12 @@
           <i>فایده‌ای که ماسک برای <b>یک شخص</b> دارد</i>، <i>فایده‌ی آن برای <b>جامعه</b></i> را محاسبه کنیم.
         </p>
 
-        <h2>Maskology</h2>
+        <h2>ماسک شناسی</h2>
 
         <p>
-          Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to
-          <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-          Vary the sliders below to see how masks moderate the spread of disease.
+          حال ببینیم اگر <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">این محاسبات</a>
+          را با <i>هر میزان</i> <b>استفاده</b> و <b>اثربخشی</b> ماسک انجام دهیم، چه می‌شود.
+          مقادیر اسلایدرهای زیر را تغییر دهید تا ببینید ماسک‌ها چگونه در انتشار بیماری تأثیر می‌گذارند.
         </p>
 
       </div>
@@ -459,24 +459,24 @@
         <div class="graphic-container">
 
           <label class="row half bigsplash">
-            <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+            <div>میزان استفاده از ماسک: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
             <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
           </label>
 
           <label class="row half bigsplash">
-            <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+            <div>اثربخشی ماسک هنگام بازدم: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
             <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
           </label>
 
           <label class="row half bigsplash">
-            <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+            <div>اثربخشی ماسک هنگام دم: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
             <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
           </label>
 
           <div class="row big-small-small padabove">
 
             <div class="column onehundredpx">
-              <div class="center">Disease Transmission Route</div>
+              <div class="center">مسیر انتقال بیماری</div>
               <anim :mask1="false" :mask2="false"></anim>
               <anim :mask1="true" :mask2="false" :eout="eout"></anim>
               <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -484,7 +484,7 @@
             </div>
 
             <div class="column onehundredpx">
-              <div class="center">Drop in Disease Transmission</div>
+              <div class="center">میزان کاهش در انتقال بیماری</div>
               <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
               <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
               <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -492,7 +492,7 @@
             </div>
 
             <div class="column onehundredpx">
-              <div class="center">Chance of This Route</div>
+              <div class="center">احتمال رخ دادن مسیر</div>
               <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
               <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
               <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -503,17 +503,17 @@
 
 
           <div class="row half bigsplash">
-            <span>Average Drop in Disease Transmission: <span class="dotted"
+            <span>میانگین کاهش انتقال بیماری: <span class="dotted"
                 style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
           </div>
 
           <div class="row half bigsplash">
-            <span>Drop in Disease Transmission to Non-Mask Wearers: <span
+            <span>کاهش انتقال بیماری در افرادی که <b>ماسک نمی‌زنند</b>: <span
                 class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
           </div>
 
           <div class="row half bigsplash">
-            <span>Drop in Disease Transmission to Mask-Wearers: <span
+            <span>کاهش انتقال بیماری در افرادی که <b>ماسک می‌زنند</b>: <span
                 class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
           </div>
 
@@ -523,47 +523,50 @@
       <div class="container">
 
         <p>
-          What happens to disease transmission if 60% of people wear a 60% effective mask?
-          Or 90% wear a 50% effective mask?
-          Or 50% wear a 90% effective mask?
-          This interactive lets you answer these questions.
+          انتقال بیماری چه تغییری می‌کند اگر ۶۰٪ افراد ماسک بزنند و اثربخشی ماسک ۶۰٪ باشد؟
+          اگر ۹۰٪ افراد ماسک بزنند و اثربخشی ماسک ۵۰٪ باشد چه؟
+          اگر ۵۰٪ افراد ماسک بزنند و اثربخشی ماسک ۹۰٪ باشد چه؟
+          این گرافیک تعاملی به این سوالات جواب می‌دهد.
         </p>
 
-        <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+        <p>
+          نتیجه اینکه: <b>هرچه افراد بیشتری ماسک بزنند، افراد ایمن‌تر هستند.</b>
+        </p>
 
         <p>
-          By filtering inhaled air, masks provide first-hand protection to those who wear them.
-          And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> —
-          including people who don't wear masks.
+          با فیلتر شدن هوای ورودی، ماسک می‌تواند ایمنی دست اول برای افرادی که از آن استفاده می‌کنند فراهم آورد.
+          با فیلتر شدن یا تغییر جهت هوای خروجی، ماسک می‌تواند ایمنی دست دوم برای همه‌ی افراد - حتی آنها که ماسک استفاده
+          نمی‌کنند - فراهم آورد.
         </p>
 
         <aside>
-          <span @click="expandaside1 = true;">What about masks that don't filter exhaled air?
-            <span v-if="!expandaside1"> (Click to expand)</span>
+          <span @click="expandaside1 = true;">پس ماسک‌هایی که هوای خروجی را فیلتر نمی‌کنند چه؟
+            <span v-if="!expandaside1"> (برای باز شدن کلیک کنید)</span>
           </span>
 
           <span v-if="expandaside1">
-            Some N95 masks come with <a
-              href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">valves or
-              openings</a> that release air without filtering it.
-            The CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recommends
-              against</a> wearing these masks in public health settings, because they put other people at risk.
-            You can see this for yourself in the interactive above.
+            بعضی از ماسک‌های N95 <a
+              href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">مجراها یا
+              شیرهایی</a> دارند که هوا را بدون فیلتر کردن خارج می‌کنند.
+            مؤسسه‌ی CDC استفاده از این نوع ماسک‌ها را <a
+              href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">پیشنهاد نمی‌کند</a>، به دلیل
+            اینکه این نوع ماسک‌ها افراد دیگر را در
+            معرض ریسک بیماری قرار می‌دهد. این موضوع در گرافیک تعاملی بالا قابل آزمایش است.
             <br><br>
-            First set the inhale & exhale effectiveness to a high value (with mask usage somewhere in the middle).
-            This represents a highly effective mask like an N95.
-            Now drag the exhale effectiveness towards zero and watch how disease transmission rises, particularly among
-            non-mask wearers.
+            ابتدا اثربخشی دم و بازدم را به مقداری بالا تنظیم کنید و میزان استفاده از ماسک را در وسط قرار دهید.
+            این مقادیر نمایانگر یک ماسک بسیار اثربخش مانند N95 است.
+            حال اثربخشی بازدم را به سمت صفر ببرید تا ببینید انتقال بیماری چگونه افزایش پیدا می‌کند. این افزایش در بین
+            افرادی که ماسک نمی‌زنند مشهودتر است.
             <br><br>
-            If you happen to already have one of these masks, the CDC recommends <a
-              href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">covering the exhalation
-              valve</a> with a surgical mask.
+            اگر از این نوع ماسک استفاده می‌کنید، می‌توانید طبق پیشنهاد CDC، <a
+              href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">مجرای خروجی هوا را با یک ماسک
+              جراحی</a> بپوشانید.
           </span>
         </aside>
 
 
         <p>
-          In fact, masks are even more effective than these numbers suggest.
+          در حقیقت ماسک‌ها حتی از آنچه این اعداد می‌گویند مؤثرترند.
         </p>
 
         <h2>How To Stop An Epidemic</h2>
